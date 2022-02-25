@@ -140,10 +140,11 @@ def draw_bbox(nm,counter,level, image, bboxes, CLASSES=YOLO_COCO_CLASSES, show_l
     thickness1 = 3
 
     for i, bbox in enumerate(bboxes):
-        # print("\n\t i=",i)
+        #print("\n\t i=",i)
         coor = np.array(bbox[:4], dtype=np.int32)
         score = bbox[4]
-        class_ind = int(bbox[5])
+        class_ind = 0#int(bbox[5]) # phosc change
+        #print("\n\t score:",score,"\t class_ind:",class_ind)
         bbox_color = rectangle_colors if rectangle_colors != '' else colors[class_ind]
         bbox_thick = int(0.6 * (image_h + image_w) / 1000)
         if bbox_thick < 1: bbox_thick = 1
