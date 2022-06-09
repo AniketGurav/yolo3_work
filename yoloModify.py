@@ -1,3 +1,7 @@
+"""
+    This is code for toy example localization with PHOSC in it
+"""
+
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.layers import Conv2D, Input, LeakyReLU, ZeroPadding2D, BatchNormalization, MaxPool2D
